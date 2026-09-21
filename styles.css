@@ -1,0 +1,233 @@
+:root {
+  /* --- Custom palette --------------------------------------- */
+  --fp-cream:        #FBF6EF;
+  --fp-cream-deep:   #F3EADF;
+  --fp-terracotta:   #C96A4B;
+  --fp-terracotta-d: #A9503A;
+  --fp-sage:         #8FA98A;
+  --fp-sage-deep:    #6E8A69;
+  --fp-charcoal:     #3A3330;
+  --fp-charcoal-soft:#6B625C;
+
+  /* --- Override Pico's theme variables ------------------- */
+  --pico-background-color: var(--fp-cream);
+  --pico-color:            var(--fp-charcoal);
+  --pico-primary:          var(--fp-terracotta);
+  --pico-primary-hover:    var(--fp-terracotta-d);
+  --pico-primary-focus:    rgba(201, 106, 75, 0.25);
+  --pico-primary-inverse:  #ffffff;
+
+  --pico-secondary:        var(--fp-sage);
+  --pico-secondary-hover:  var(--fp-sage-deep);
+
+  --pico-muted-color:      var(--fp-charcoal-soft);
+  --pico-muted-border-color: var(--fp-cream-deep);
+
+  --pico-border-radius:    0.75rem;
+  --pico-font-family:      "Georgia", "Iowan Old Style", serif;
+  --pico-font-family-sans-serif: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Slightly warmer body wash */
+body {
+  background:
+    radial-gradient(circle at top left,  rgba(143, 169, 138, 0.08), transparent 40%),
+    radial-gradient(circle at top right, rgba(201, 106, 75, 0.08), transparent 40%),
+    var(--fp-cream);
+  min-height: 100vh;
+}
+
+/* ============================================================
+   Header & footer
+   ============================================================ */
+
+.site-header {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  color: var(--fp-terracotta);
+  letter-spacing: -0.02em;
+}
+
+.site-header p {
+  color: var(--fp-charcoal-soft);
+  font-family: var(--pico-font-family-sans-serif);
+}
+
+.site-footer {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  color: var(--fp-charcoal-soft);
+  font-family: var(--pico-font-family-sans-serif);
+}
+
+/* ============================================================
+   Card grid — home view
+   ============================================================ */
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.guide-card {
+  background: #ffffff;
+  border: 1px solid var(--fp-cream-deep);
+  border-radius: var(--pico-border-radius);
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.guide-card:hover,
+.guide-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--fp-terracotta);
+  box-shadow: 0 10px 25px -12px rgba(58, 51, 48, 0.25);
+  outline: none;
+}
+
+.guide-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: calc(var(--pico-border-radius) - 0.25rem);
+  overflow: hidden;
+  background: var(--fp-cream-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guide-card__image svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.guide-card__title {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--fp-charcoal);
+}
+
+.guide-card__desc {
+  margin: 0;
+  color: var(--fp-charcoal-soft);
+  font-size: 0.95rem;
+  font-family: var(--pico-font-family-sans-serif);
+  line-height: 1.5;
+}
+
+/* ============================================================
+   Detail view
+   ============================================================ */
+
+.detail {
+  max-width: 720px;
+  margin: 2rem auto 0;
+}
+
+.detail__back {
+  font-family: var(--pico-font-family-sans-serif);
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.detail__image {
+  border-radius: var(--pico-border-radius);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: var(--fp-cream-deep);
+}
+
+.detail__image svg {
+  width: 100%;
+  display: block;
+}
+
+.detail__title {
+  color: var(--fp-terracotta);
+  margin-bottom: 0.25rem;
+}
+
+.detail__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+  font-family: var(--pico-font-family-sans-serif);
+}
+
+.detail__badge {
+  background: var(--fp-sage);
+  color: #ffffff;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.detail__badge--time {
+  background: var(--fp-terracotta);
+}
+
+.detail h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--fp-charcoal);
+  font-size: 1.1rem;
+}
+
+.detail ul {
+  font-family: var(--pico-font-family-sans-serif);
+  color: var(--fp-charcoal-soft);
+}
+
+.detail li {
+  margin-bottom: 0.35rem;
+}
+
+.pro-tip {
+  background: var(--fp-cream-deep);
+  border-left: 4px solid var(--fp-terracotta);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--pico-border-radius) var(--pico-border-radius) 0;
+  margin-top: 1.75rem;
+  font-family: var(--pico-font-family-sans-serif);
+}
+
+.pro-tip strong {
+  color: var(--fp-terracotta);
+}
+
+/* ============================================================
+   404 view
+   ============================================================ */
+
+.not-found {
+  text-align: center;
+  padding: 4rem 1rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.not-found h2 {
+  color: var(--fp-terracotta);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.not-found p {
+  color: var(--fp-charcoal-soft);
+  font-family: var(--pico-font-family-sans-serif);
+}
