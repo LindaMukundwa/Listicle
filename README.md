@@ -1,5 +1,3 @@
-# Listicle
-
 # WEB103 Project 2 - *Foster Paws*
 
 Submitted by: **Linda Mukundwa**
