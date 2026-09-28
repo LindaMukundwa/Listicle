@@ -32,6 +32,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented required features:
 
 <img src='https://imgur.com/a/TimCOJL' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+Link (if broken in image) = https://imgur.com/a/TimCOJL 
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with screen recording + Imgur
