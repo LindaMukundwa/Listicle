@@ -15,8 +15,8 @@ The following **required** functionality is completed:
 <!-- Make sure to check off completed functionality below -->
 - [X] **The web app uses only HTML, CSS, and JavaScript without a frontend framework**
 - [X] **The web app is connected to a PostgreSQL database, with an appropriately structured database table for the list items**
-  - [ ] **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
-  - [ ]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
+  - [X] **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
+  - [X]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
 
 
 The following **optional** features are implemented:
@@ -25,7 +25,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you added to improve the site's functionality!
+- [X] Created Render Web Service to connect both site and DB. Please check it out with the link: https://foster-paws.onrender.com/ 
 
 ## Video Walkthrough
 
@@ -33,7 +33,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://imgur.com/a/FdeuOwb' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/TimCOJL' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with screen recording + Imgur
